@@ -10,39 +10,32 @@ console.log(userChoice);
 // costante del contenitore
 const squareContainer = document.getElementById("container");
 
-// layout a seconda della difficoltà
-if (userChoice === 1) {
-    // ciclo per la ripetizione degli square
-    for (let i = 1; i <= 100; i++) {
-        let square = document.createElement("div");
-        square.classList.add("square");
-        square.append(i);
-        squareContainer.append(square);
+// variabile per layout di scelta dell'utente
+let levels = 100;
 
-        // // aggiunta click
-        // square.addEventListener (`click`, 
-        //     function () {
-        //         menu.classList.add('selection');
-        //     }
-        // );
-    }
-} else if (userChoice === 2) {
-    // ciclo per la ripetizione degli square
-    for (let i = 1; i <= 81; i++) {
-        let square = document.createElement("div");
-        square.classList.add("square");
-        square.append(i);
+if (userChoice == 1) {
+    levels = 100;
+}
 
-        squareContainer.append(square);
-    }
-} else if (userChoice === 3) {
-    // ciclo per la ripetizione degli square
-    for (let i = 1; i <= 49; i++) {
-        let square = document.createElement("div");
-        square.classList.add("square");
-        square.append(i);
+if (userChoice == 2) {
+    levels = 81;
+}
 
-        squareContainer.append(square);
-    }
+if (userChoice == 3) {
+    levels = 49;
+}
+
+// ciclo per la ripetizione degli square
+for (let i = 1; i <= levels; i++) {
+    let square = document.createElement("div");
+    square.classList.add("square");
+    square.append(i);
+    squareContainer.append(square);
+
+    // aggiunta click
+    square.addEventListener ('click', function() {
+        console.log('hai cliccato!', this)
+        square.classList.add("selection");
+    });
 }
 
