@@ -12,7 +12,23 @@ body {
 #container {
     margin: 50px auto;
     width: 70%;
+    border: 5px solid white;
+    display: flex;
+    flex-flow: row wrap;
     /* debug */
     height: 500px;
-    background-color: blueviolet;
+}
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    border: 5px solid white;
+    border-left: none;
+}
+
+.number {
+    font-size: 25px;
 }
