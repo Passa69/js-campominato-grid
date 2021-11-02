@@ -4,7 +4,7 @@
 // 3. l'utente deve essere in grado di selezionare le celle per rendere selezionate => click + classList
 
 // richiesta all'utente
-const userChoice = parseInt(prompt("Scegli il livello di difficoltà tra: 1, 2 e 3"));
+const userChoice = parseInt(prompt("Scegli il livello di difficoltà tra: 1, 2 o 3"));
 console.log(userChoice);
 
 // costante del contenitore
@@ -17,8 +17,14 @@ if (userChoice === 1) {
         let square = document.createElement("div");
         square.classList.add("square");
         square.append(i);
-
         squareContainer.append(square);
+
+        // // aggiunta click
+        // square.addEventListener (`click`, 
+        //     function () {
+        //         menu.classList.add('selection');
+        //     }
+        // );
     }
 } else if (userChoice === 2) {
     // ciclo per la ripetizione degli square
