@@ -11,12 +11,11 @@ body {
 
 #container {
     margin: 50px auto;
-    width: 70%;
-    border: 5px solid white;
+    width: 60%;
     display: flex;
     flex-flow: row wrap;
     /* debug */
-    height: 500px;
+    /* height: 500px; */
 }
 
 .square {
@@ -25,8 +24,9 @@ body {
     justify-content: center;
     height: 100px;
     width: 100px;
+    margin: 10px;
+    margin-left: 20px;
     border: 5px solid white;
-    border-left: none;
 }
 
 .number {
