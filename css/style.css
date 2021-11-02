@@ -14,8 +14,6 @@ body {
     width: 60%;
     display: flex;
     flex-flow: row wrap;
-    /* debug */
-    /* height: 500px; */
 }
 
 .square {
@@ -31,4 +29,9 @@ body {
 
 .number {
     font-size: 25px;
+}
+
+/* click */
+.selection {
+    background-color: white;
 }
