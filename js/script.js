@@ -10,13 +10,33 @@ console.log(userChoice);
 // costante del contenitore
 const squareContainer = document.getElementById("container");
 
+// layout a seconda della difficoltà
+if (userChoice === 1) {
+    // ciclo per la ripetizione degli square
+    for (let i = 1; i <= 100; i++) {
+        let square = document.createElement("div");
+        square.classList.add("square");
+        square.append(i);
 
+        squareContainer.append(square);
+    }
+} else if (userChoice === 2) {
+    // ciclo per la ripetizione degli square
+    for (let i = 1; i <= 81; i++) {
+        let square = document.createElement("div");
+        square.classList.add("square");
+        square.append(i);
 
-// // ciclo base per la ripetizione degli square
-// for (let i = 1; i <= 100; i++) {
-//     let square = document.createElement("div");
-//     square.classList.add("square");
-//     square.append(i);
+        squareContainer.append(square);
+    }
+} else if (userChoice === 3) {
+    // ciclo per la ripetizione degli square
+    for (let i = 1; i <= 49; i++) {
+        let square = document.createElement("div");
+        square.classList.add("square");
+        square.append(i);
 
-//     squareContainer.append(square);
-// }
+        squareContainer.append(square);
+    }
+}
+
