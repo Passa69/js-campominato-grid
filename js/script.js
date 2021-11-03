@@ -11,31 +11,34 @@ console.log(userChoice);
 const squareContainer = document.getElementById("container");
 
 // variabile per layout di scelta dell'utente
-let levels = 100;
+let levels;
 
 if (userChoice == 1) {
-    levels = 100;
+    cicleSquare(100);
 }
 
 if (userChoice == 2) {
-    levels = 81;
+    cicleSquare(81);
 }
 
 if (userChoice == 3) {
-    levels = 49;
+    cicleSquare(49);
 }
 
 // ciclo per la ripetizione degli square
-for (let i = 1; i <= levels; i++) {
-    let square = document.createElement("div");
-    square.classList.add("square");
-    square.append(i);
-    squareContainer.append(square);
+function cicleSquare(levels) {
 
-    // aggiunta click
-    square.addEventListener ('click', function() {
-        console.log('hai cliccato!', this)
-        square.classList.add("selection");
-    });
+    for (let i = 1; i <= levels; i++) {
+        let square = document.createElement("div");
+        square.classList.add("square");
+        square.append(i);
+        squareContainer.append(square);
+    
+        // aggiunta click
+        square.addEventListener ('click', function() {
+            console.log('hai cliccato!', this)
+            square.classList.add("selection");
+        });
+    }
 }
 
